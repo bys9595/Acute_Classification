@@ -5,4 +5,4 @@ import subprocess
 # num_classes=$3
 
 subprocess.run(['bash', 'train_multiclass_multiGPU.sh', '4Class+Normal', 'swint_v1_ours', '5'])
-# subprocess.run(['bash', 'train_multiclass_multiGPU.sh', '6Class+Normal', 'swint_v1_ours'])
+# subprocess.run(['bash', 'train_multiclass_multiGPU.sh', '6Class+Normal', 'swint_v1_ours', '7'])
