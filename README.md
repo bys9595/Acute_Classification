@@ -57,7 +57,8 @@ GPU number는 각 shell 파일에서 지정해주기!~
 multiclass 인 경우에만 해당됨.
 
 1. `preprocess/make_json_kfold_multiclass.py` 파일에서 원하는 class 를 조합하고, task name 지정해서 json 파일 생성하기
-2. `train_multiclass_multiGPU.sh` 파일 실행할 때 지정한 task name을 argument로 넣어서 실행
+2. `/mai_nas/Private_Dataset/GangNam_SEV/jsons_multiclass/` 폴더 안에 생성된 json 파일 확인하기
+3. `train_multiclass_multiGPU.sh` 파일 실행할 때 지정한 task name을 argument로 넣어서 실행
 
 모르겠으면 물어보슈
 
