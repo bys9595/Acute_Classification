@@ -21,12 +21,17 @@ pip install -r requirements.txt
 ## Run
 ### Binary Classification
 ```
-bash train_binary_multiGPU.sh
+bash train_binary_multiGPU.sh acute_appendicitis yunsu
 ```
 
 ### Multi-Class Classification
 ```
-bash train_multiclass_multiGPU.sh
+bash train_multiclass_multiGPU.sh 4Class+Normal yunsu
 ```
 
+
+### 한방에 돌리기
+```
+python multirun_binary.py
+```
 GPU number는 각 shell 파일에서 지정해주기!~
