@@ -65,6 +65,8 @@ def main():
     args = parser.parse_args()
     args.amp = not args.noamp
     
+    torch.multiprocessing.set_sharing_strategy('file_system')
+        
     os.makedirs(args.logdir, exist_ok=True)
     setup_default_logging(log_path=os.path.join(args.logdir, args.test_data_key + '.txt'))
     
@@ -117,16 +119,11 @@ def main():
         if isinstance(value, float):
             if key in ['Accuracy', 'Sensitivity', 'Specificity']:
                 logging.info(str(key)+ "  :  " + str(round(value*100, 2)))
-            elif key in ['Best_thres']:
-                logging.info(str(key)+ "  :  {}".format(str(value)))
             else:
                 logging.info(str(key)+ "  :  " + str(round(value, 3)))
         else:
             logging.info(str(key)+ "  :  {}".format(value))
             
-    
-    print("RETURN: " + str(metrics_dict['Best_thres'])) # Do not remove this print line, this is for capturing the path of model
-
 
 logs = set()
 def init_log(name, level=logging.INFO):

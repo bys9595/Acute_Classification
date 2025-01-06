@@ -66,6 +66,8 @@ def main():
     args = parser.parse_args()
     args.amp = not args.noamp
     
+    torch.multiprocessing.set_sharing_strategy('file_system')
+    
     os.makedirs(args.logdir, exist_ok=True)
     setup_default_logging(log_path=os.path.join(args.logdir, args.test_data_key + '.txt'))
     
