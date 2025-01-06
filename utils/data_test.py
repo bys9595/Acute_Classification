@@ -106,9 +106,7 @@ def get_loader(args):
     test_ds = data.Dataset(data=datalist_val, transform=test_transform)    
     test_sampler = Sampler(test_ds, shuffle=False) if args.distributed else None
     test_loader = data.DataLoader(
-        test_ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers, sampler=test_sampler, pin_memory=True,
-        persistent_workers=True, prefetch_factor=2,
-    )
+        test_ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers, sampler=test_sampler, pin_memory=False)
     loader = test_loader
         
     return loader
@@ -155,9 +153,7 @@ def get_loader_multiclass(args):
     test_ds = data.Dataset(data=datalist_val, transform=test_transform)    
     test_sampler = Sampler(test_ds, shuffle=False) if args.distributed else None
     test_loader = data.DataLoader(
-        test_ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers, sampler=test_sampler, pin_memory=True,
-        persistent_workers=True, prefetch_factor=2,
-    )
+        test_ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers, sampler=test_sampler, pin_memory=False)
     loader = test_loader
         
     return loader

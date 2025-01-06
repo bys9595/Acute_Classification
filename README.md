@@ -30,6 +30,8 @@ pip install -r requirements.txt
 - 한 방에 여러 class 혹은 여러 task 가 queue 되어서 실행되게 만들고 싶어서 `multirun_binary.py`, `multirun_multiclass.py` 도 만들었음
 
 ## Run
+
+bash 파일안에 있는 root_dir 경로 수정해주기!!!!!!!
 ### Binary Classification
 ```
 # $1 class name $2 save directory name 
@@ -56,5 +58,7 @@ multiclass 인 경우에만 해당됨.
 
 1. `preprocess/make_json_kfold_multiclass.py` 파일에서 원하는 class 를 조합하고, task name 지정해서 json 파일 생성하기
 2. `train_multiclass_multiGPU.sh` 파일 실행할 때 지정한 task name을 argument로 넣어서 실행
+
+모르겠으면 물어보슈
 
  

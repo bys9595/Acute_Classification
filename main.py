@@ -37,7 +37,7 @@ import os
 import resource
 rlimit = resource.getrlimit(resource.RLIMIT_NOFILE)
 resource.setrlimit(resource.RLIMIT_NOFILE, (8192, rlimit[1]))
-print('Setting resource limit:', str(resource.getrlimit(resource.RLIMIT_NOFILE)))
+# print('Setting resource limit:', str(resource.getrlimit(resource.RLIMIT_NOFILE)))
 
 
 parser = argparse.ArgumentParser(description="Swin UNETR segmentation pipeline")
