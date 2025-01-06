@@ -343,8 +343,6 @@ class MultiClassEvalMetrics(Metric):
         metric_dict['Precision']=[]
         metric_dict['Accuracy']=[]
         metric_dict['F1_Score']=[]
-        metric_dict['CI95_lower']=[]
-        metric_dict['CI95_upper']=[]
         
         for i in range(len(conf_mat)):        
             tp = conf_mat[i, i]

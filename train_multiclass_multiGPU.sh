@@ -22,18 +22,18 @@ num_classes=$3
 root_dir=/mnt/BYS/github_codes/Gangnam_Sev
 fold_num=0
 
-# python main_multiclass.py \
-#     --model swint \
-#     --out_channels $num_classes \
-#     --batch_size 1 \
-#     --task_name ${task_name} \
-#     --logdir ${root_dir}/runs/${task_name}/${save_dir_name}/fold_$fold_num \
-#     --fold_num $fold_num \
-#     --pretrained_checkpoint /mai_nas/BYS/SSL/GBT/runs/MR_CT_100k_swin_modified/checkpoint100000.pth \
-#     --distributed \
-#     --dist-url tcp://127.0.0.1:23434 \
-#     --use_ssl_pretrained True \
-#     --majority_undersampling 
+python main_multiclass.py \
+    --model swint \
+    --out_channels $num_classes \
+    --batch_size 1 \
+    --task_name ${task_name} \
+    --logdir ${root_dir}/runs/${task_name}/${save_dir_name}/fold_$fold_num \
+    --fold_num $fold_num \
+    --pretrained_checkpoint /mai_nas/BYS/SSL/GBT/runs/MR_CT_100k_swin_modified/checkpoint100000.pth \
+    --distributed \
+    --dist-url tcp://127.0.0.1:23434 \
+    --use_ssl_pretrained True \
+    --majority_undersampling 
 
 python eval_multiclass.py \
     --model swint \
