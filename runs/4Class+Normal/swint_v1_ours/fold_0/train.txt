@@ -1,0 +1,10 @@
+2025-01-06 18:05:02,378 -                 root: [    INFO] - [Train] Epoch 0/50 10/695 loss: 1.6516 lr: 0.000001 time 34.43s
+2025-01-06 18:05:26,836 -                 root: [    INFO] - [Train] Epoch 0/50 20/695 loss: 1.6777 lr: 0.000001 time 24.46s
+2025-01-06 18:05:54,825 -                 root: [    INFO] - [Train] Epoch 0/50 30/695 loss: 1.6434 lr: 0.000001 time 27.99s
+2025-01-06 18:06:14,865 -                 root: [    INFO] - [Train] Epoch 0/50 40/695 loss: 1.6262 lr: 0.000001 time 20.04s
+2025-01-06 18:06:35,947 -                 root: [    INFO] - [Train] Epoch 0/50 50/695 loss: 1.6171 lr: 0.000001 time 21.08s
+2025-01-06 18:06:55,943 -                 root: [    INFO] - [Train] Epoch 0/50 60/695 loss: 1.6303 lr: 0.000001 time 20.00s
+2025-01-06 18:07:14,828 -                 root: [    INFO] - [Train] Epoch 0/50 70/695 loss: 1.6026 lr: 0.000001 time 18.88s
+2025-01-06 18:07:43,965 -                 root: [    INFO] - [Train] Epoch 0/50 80/695 loss: 1.6186 lr: 0.000001 time 29.14s
+2025-01-06 18:08:03,760 -                 root: [    INFO] - [Train] Epoch 0/50 90/695 loss: 1.6164 lr: 0.000001 time 19.79s
+2025-01-06 18:08:28,155 -                 root: [    INFO] - [Train] Epoch 0/50 100/695 loss: 1.6141 lr: 0.000001 time 24.39s
