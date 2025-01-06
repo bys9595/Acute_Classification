@@ -35,3 +35,4 @@
 2025-01-06 18:17:25,825 -                 root: [    INFO] - [Train] Epoch 0/50 350/695 loss: 1.5860 lr: 0.000001 time 29.80s
 2025-01-06 18:17:49,806 -                 root: [    INFO] - [Train] Epoch 0/50 360/695 loss: 1.5825 lr: 0.000001 time 23.98s
 2025-01-06 18:18:14,482 -                 root: [    INFO] - [Train] Epoch 0/50 370/695 loss: 1.5850 lr: 0.000001 time 24.68s
+2025-01-06 18:18:30,958 -                 root: [    INFO] - [Train] Epoch 0/50 380/695 loss: 1.5850 lr: 0.000001 time 16.48s
