@@ -21,14 +21,14 @@ pip install -r requirements.txt
 ## Run
 ### Binary Classification
 ```
-# $1 class name, $2 save directory name
+# $1 class name $2 save directory name 
 bash train_binary_multiGPU.sh acute_appendicitis yunsu
 ```
 
 ### Multi-Class Classification
 ```
-# $1 task name, $2 save directory name
-bash train_multiclass_multiGPU.sh 4Class+Normal yunsu
+# $1 task name $2 save directory name $3 num_classes
+bash train_multiclass_multiGPU.sh 4Class+Normal yunsu 5
 ```
 
 

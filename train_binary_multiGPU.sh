@@ -1,9 +1,3 @@
-export CUDA_VISIBLE_DEVICES="0,1,2,3" 
-
-root_dir=/mnt/BYS/github_codes/Gangnam_Sev
-acute_class_name=$1 
-save_dir_name=$2
-
 # Class Names -----------------------------------------------------------------------------------------------------------
 # acute_appendicitis, acute_cholecystitis, biliary_stone, abdominal_aortic_aneurysm, 
 # active_bleeding, acute_diverticulitis, acute_pancreatitis, acute_pyelonephritis, 
@@ -19,7 +13,15 @@ save_dir_name=$2
 
 # if you want to use majority undersampling, add the argument --majority_undersampling
 
+export CUDA_VISIBLE_DEVICES="0,1,2,3" 
+
+acute_class_name=$1 
+save_dir_name=$2
+
+root_dir=/mnt/BYS/github_codes/Gangnam_Sev
 fold_num=0
+
+
 python main.py \
     --model swint \
     --batch_size 2 \

@@ -116,7 +116,7 @@ def val_epoch(model, loader, epoch, args):
             else:
                 data, target = batch_data["image"], batch_data["label"]
 
-            target = target.float()
+            target = target.long()
             
             data, target = data.cuda(args.rank), target.cuda(args.rank)
             
