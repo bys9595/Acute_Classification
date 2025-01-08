@@ -123,7 +123,8 @@ class BalancedSampler(torch.utils.data.Sampler):
         for label, label_indices in self.label_to_indices.items():
             if self.sampling_strategy == 'under':
                 if len(label_indices) > self.num_samples_per_class:
-                    selected = torch.randperm(len(label_indices))[:self.num_samples_per_class].tolist()
+                    rand_idx = torch.randperm(len(label_indices))[:self.num_samples_per_class]
+                    selected = torch.tensor(label_indices)[rand_idx].tolist()
                 else:
                     selected = label_indices
             else:
