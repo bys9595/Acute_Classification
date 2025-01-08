@@ -17,7 +17,7 @@ import torch
 import itertools as it
 from monai import data, transforms
 from monai.data import *
-
+from collections import Counter
 
 class Sampler(torch.utils.data.Sampler):
     def __init__(self, dataset, num_replicas=None, rank=None, shuffle=True, make_even=True):
@@ -134,6 +134,8 @@ def get_loader_multiclass(args):
             datalist_val.append({"image": item["image"], "label": item["label"]})
 
     print("Test Dataset: number of data: {}".format(len(datalist_val)))
+    label_counts = Counter(item["label"] for item in datalist_val)
+    print("Class distribution: {}".format(label_counts))
     
     
     test_transform = transforms.Compose(
