@@ -7,7 +7,7 @@
 - evaluation 진행할 때 클래스별 데이터 수 출력하기
 
 ***06/01/2025***
-github upload
+- github upload
 
 ## Installation
 1. conda env 만들기
