@@ -5,6 +5,7 @@
 
 ***09/01/2025***
 - Dataloader -> ThreadDataLoader 로 변경 (학습 빨라짐!!!)
+- Multi-class classification 진행 시 Validation 에서도 Balanced Sampling 적용함 (binary에서는 적용 안해도 될듯)
 
 
 ***08/01/2025***

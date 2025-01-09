@@ -268,12 +268,7 @@ def get_loader(args):
         train_ds = data.Dataset(data=datalist_train, transform=train_transform)
     else:
         train_ds = data.SmartCacheDataset(data=datalist_train, transform=train_transform, replace_rate=1.0, cache_num=int(2*args.batch_size))
-        
-    if args.use_normal_dataset:
-        train_ds = data.Dataset(data=datalist_train, transform=train_transform)
-    else:
-        train_ds = data.SmartCacheDataset(data=datalist_train, transform=train_transform, replace_rate=1.0, cache_num=int(2*args.batch_size))
-        
+    
     if args.distributed:
         if args.majority_undersampling:
             train_sampler = BalancedSampler(train_ds, labels=[item["label"] for item in datalist_train],
@@ -297,21 +292,8 @@ def get_loader(args):
 
     # Validation Dataloader
     val_ds = data.Dataset(data=datalist_val, transform=val_transform)
-    
-    if args.distributed:
-        if args.majority_undersampling:
-            val_sampler = BalancedSampler(val_ds, labels=[item["label"] for item in datalist_val],
-                                            sampling_strategy='under', distributed=True)
-        else:
-            val_sampler = Sampler(val_ds)
-    else:
-        if args.majority_undersampling:
-            val_sampler = BalancedSampler(val_ds, labels=[item["label"] for item in datalist_val],
-                                            sampling_strategy='under', distributed=False)
-        else:
-            val_sampler = None
             
-    # val_sampler = Sampler(val_ds, shuffle=False) if args.distributed else None
+    val_sampler = Sampler(val_ds, shuffle=False) if args.distributed else None
 
     val_loader = data.ThreadDataLoader(
         val_ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers, sampler=val_sampler)
@@ -425,9 +407,7 @@ def get_loader_multiclass(args):
         else:
             val_sampler = None
             
-            
-    # val_sampler = Sampler(val_ds, shuffle=False) if args.distributed else None
-
+        
     val_loader = data.ThreadDataLoader(
         val_ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers, sampler=val_sampler)
     loader = [train_loader, val_loader]
