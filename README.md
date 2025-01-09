@@ -3,6 +3,10 @@
 
 ## Updates
 
+***09/01/2025***
+- Dataloader -> ThreadDataLoader 로 변경 (학습 빨라짐!!!)
+
+
 ***08/01/2025***
 - evaluation 진행할 때 클래스별 데이터 수 출력하기
 - Balanced Sampling 오류 수정
